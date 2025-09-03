@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Extracted Information - Ask Mufasa!</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.8/dist/chart.umd.min.js"></script>
+
+</head>
+<body>
+    <!-- header Section -->
+    <header>
+        <div class="header-container">
+            <div class="logo" style="color: #93785b;">My Dashboard!</div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#what-we-do">What we do</a></li>
+                    <li><a href="cv-templates.html">Resume</a></li>
+                    <li><a href="careers.html">Careers</a></li>
+                    <li class="dropdown">
+                        <a href="extracted-info.html" class="dropbtn">Training Resources</a>
+                        <div class="dropdown-content">
+                            <a href="#cv-training">CV/Resume Training</a>
+                            <a href="#hr-training">HR Training</a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+            <div class="header-options">
+                <button class="sign-in-btn">Login / Sign In</button>
+                <button class="premium-feature-btn" onclick="openPremiumModal()">Premium Features</button>
+                <select id="language-selector" class="language-selector" aria-label="Select Language">
+                    <option value="en">English</option>
+                    <option value="fr">French</option>
+                    <option value="rw">Kinyarwanda</option>
+                    <option value="es">Spanish</option>
+                    <option value="zh">Chinese</option>
+                </select>
+            </div>
+        </div>
+        
+    </header>
+  
+    <section id="your-dashboard">
+        <!-- <div class="background-image"></div> -->
+        <h1 class="animate-rise">My Dashboard</h1>
+        <!-- Modules Section -->
+    <section id="module-directory" style="margin-top: 2rem;">
+        <h2 style="text-align: center; color: #93785b;">Choose Your Training Module</h2>
+        <div class="directory-container">
+            <button class="module-btn" onclick="location.href='excel-basics.html'">Excel Basics</button>
+            <button class="module-btn" onclick="location.href='soft-skills.html'">Soft Skills</button>
+            <button class="module-btn" onclick="location.href='coding-basics.html'">Coding for Beginners</button>
+            <button class="module-btn" onclick="location.href='communication-skills.html'">Communication Skills</button>
+            <button class="module-btn" onclick="location.href='digital-literacy.html'">Digital Literacy</button>
+        </div>
+    </section>  
+    </section>
+    
+    <!-- Extracted Information Section -->
+    <main>
+    <section id="extracted-info-section">
+        <div class="info-container">
+            <!-- Extracted Information Card -->
+            <div class="content-container card">
+                <h2 id="typewriter-heading" class="typewriter">Extracted Information</h2>
+                <p><strong>Name:</strong> <span id="name" class="typewriter"></span></p>
+                <p><strong>Date of Birth:</strong> <span id="dob" class="typewriter"></span></p>
+                <p><strong>Work Experience:</strong></p>
+                <ul id="experience-list"></ul>
+                <p><strong>Skills:</strong></p>
+                <ul id="skills-list"></ul>
+            </div>
+
+            <!-- Compare My Skills Button -->
+            <button id="compare-skills-btn" class="compare-btn">Compare My Skills</button>
+
+<!-- Skills Comparison Chart -->
+<div id="skills-comparison-chart" style="width: 400px; height: 400px; margin: 3rem auto;">
+    <canvas id="skills-chart" width="400" height="400"></canvas>
+</div>
+
+<!-- Skills Details List (Initially Hidden) -->
+<div id="skills-details" style="padding-top: 1rem; display: none;">
+    <ul id="skills-list">
+        <li><strong>Foundational:</strong> Problem-solving, Critical thinking, Creativity, Analytical reasoning</li>
+        <li><strong>Socio-Emotional:</strong> Communication, Teamwork, Leadership, Adaptability</li>
+        <li><strong>Specialized:</strong> Technical skills, Programming, Project management, Entrepreneurship</li>
+        <li><strong>Green & Sustainable:</strong> Environmental awareness, Sustainable practices</li>
+        <li><strong>Digital & Technological:</strong> Digital Literacy, Cybersecurity, Cloud computing</li>
+    </ul>
+    </div>
+    </section>
+</main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2025 Ask Mufasa. All Rights Reserved.</p>
+    </footer>
+</body>
+<script src="script.js"></script>
+</html>
