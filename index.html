@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ask Mufasa!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <!-- Logo/Title on the left -->
+            <div class="logo" style="color: #93785b;">Ask Mufasa!</div>
+            <!-- Navigation menu on the right -->
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#what-we-do">What we do</a></li>
+                    <li><a href="cv-templates.html">Resume</a></li>
+                    <li><a href="careers.html">Careers</a></li>
+                    <li class="dropdown">
+                        <a href="extracted-info.html" class="dropbtn">Training Resources</a>
+                        <div class="dropdown-content">
+                            <a href="#cv-training">CV/Resume Training</a>
+                            <a href="#hr-training">HR Training</a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+            <!-- Login/Sign In and Language selector -->
+            <div class="header-options">
+                <button class="sign-in-btn">Login / Sign In</button>
+                <select id="language-selector" class="language-selector" aria-label="Select Language">
+                    <option value="en">English</option>
+                    <option value="fr">French</option>
+                    <option value="rw">Kinyarwanda</option>
+                    <option value="es">Spanish</option>
+                    <option value="zh">Chinese</option>
+                </select>
+            </div>
+        </div>
+        <script src="script.js"></script>
+    </header>
+    <main>
+        <!-- Home Section -->
+<section id="home">
+    <div class="background-image"></div>
+    <h1 class="animate-rise">Hi, I am Mufasa!</h1>
+    <p class="animate-rise">Your gateway to job opportunities and skills development</p>
+</section>
+
+<!-- Get Started Section -->
+<section id="get-started-section">
+    <div class="get-started-container">
+        <a href="#resume-upload" id="get-started-btn" class="get-started-btn">Get Started</a>
+    </div>
+</section>
+
+<!-- Resume Upload Section (Initially Hidden) -->
+<section id="resume-upload" style="display: none;">
+    <!-- Upload CV Section -->
+    <div class="upload-container card animate-rise" style="opacity: 0;">
+        <h2>Upload Your Resume/CV</h2>
+        <form id="upload-form" enctype="multipart/form-data">
+            <label for="resume">Choose your file:</label>
+            <input type="file" id="resume" name="file" accept=".pdf" />
+            <button type="submit" class="upload-btn">Upload</button>
+        </form>
+        
+
+        <!-- Display extracted data -->
+        <div id="cv-summary" style="display: none; margin-top: 2rem;">
+            <h3>Extracted Information:</h3>
+            <p><strong>Name:</strong> <span id="name"></span></p>
+            <p><strong>Date of Birth:</strong> <span id="dob"></span></p>
+            <p><strong>Work Experience:</strong> <span id="experience"></span></p>
+            <p><strong>Skills:</strong> <span id="skills"></span></p>
+        </div>
+    </div>
+
+    <!-- Create CV Section -->
+    <div class="create-container card animate-rise" style="opacity: 0;">
+        <h2>Don't Have One?</h2>
+        <p>No worries! We got you covered.</p>
+        <button class="create-btn" onclick="window.location.href='cv-templates.html'">Create CV</button>
+    </div>
+</section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Ask Mufasa. All Rights Reserved.</p>
+    </footer>
+   <script src="script.js"></script>
+</body>
+</html>
