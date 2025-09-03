@@ -1,0 +1,799 @@
+/* Reset some basic styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* General body styles */
+body {
+    line-height: 1.6;
+    background-color: #fff;
+    color: #333;
+    align-items: center;
+}
+
+/* Header styles */
+header {
+    background-color: #fff;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #0097b2;
+}
+
+/* Navigation menu */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li a {
+    text-decoration: none;
+    background-color: #0097b2;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+}
+
+nav ul li a:hover {
+    background-color: #8a6e52;
+}
+
+/* Dropdown menu styles */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    min-width: 200px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    color: #333;
+    font-size: 0.9rem;
+}
+
+.dropdown-content a:hover {
+    background-color: #0097b2;
+    color: #fff;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Login/Sign In button and Language Selector */
+.header-options {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.sign-in-btn {
+    background-color: #0097b2;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.sign-in-btn:hover {
+    background-color: #8a6e52;
+}
+
+.premium-feature-btn {
+    background-color: #0097b2;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+.language-selector {
+    background-color: #fff;
+    border: 1px solid #0097b2;
+    border-radius: 5px;
+    padding: 0.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+/* Home Section */
+#home {
+    background-color: #0097b2;
+    color: #000;
+    text-align: center;
+    padding: 5rem 2rem;
+}
+
+#home h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+#home p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#home {
+    position: relative;
+    background: url('Mufasa background.jpeg') no-repeat center center/cover;
+    color: #ffffff;
+    text-align: center;
+    padding: 5rem 2rem;
+    z-index: 1;
+}
+
+#home::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(147, 120, 91, 0.5);
+    z-index: 0;
+    pointer-events: none;
+}
+
+#home .animate-arise {
+    position: relative;
+    opacity: 0;
+    transform: translateY(50px);
+    animation: rise-animation 2s ease-out forwards;
+}
+
+@keyframes rise-animation {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        translateY: (0);
+    }
+}
+
+#home h1, #home p {
+    position: relative;
+    z-index: 2;
+}
+
+/* Get Started Section */
+#get-started-section {
+    background-color: #fff;
+    padding: 3rem 2rem;
+    text-align: center;
+}
+
+/* Get Started Button Styling */
+#get-started-section .get-started-btn {
+    display: inline-block;
+    background-color: #0097b2;
+    color: #fff;
+    padding: 0.8rem 2rem;
+    border-radius: 25px;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#get-started-section .get-started-btn:hover {
+    background-color: #8a6e52;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Resume Upload Section */
+#resume-upload {
+    display: none;
+    margin-top: 2rem; /* Space below the "Get Started" button */
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem; /* Spacing between cards */
+    flex-wrap: wrap; /* Ensure horizontal alignment */
+    max-width: 80%; /* Center cards within the page */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Card Design */
+.card {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+    padding: 2rem;
+    flex: 1;
+    max-width: 400px; /* Ensure cards don’t exceed width */
+    text-align: center;
+    animation: rise-animation 2s ease-out forwards;
+}
+
+/* Button Styling for Upload and Create */
+.upload-btn,
+.create-btn {
+    background-color: #0097b2;
+    color: #fff;
+    border: none;
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 25px;
+    text-decoration: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.upload-btn:hover,
+.create-btn:hover {
+    background-color: #8a6e52;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.4);
+}
+
+/* Template Page Styling */
+header {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #333;
+}
+
+.template-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 2rem;
+}
+
+.template {
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 1rem;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.template-img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+.use-template-btn {
+    display: inline-block;
+    margin-top: 1rem;
+    background-color: #0097b2;
+    color: #fff;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.use-template-btn:hover {
+    background-color: #8a6e52;
+    transform: translateY(-3px);
+}
+
+/* Create CV Section Styling */
+#create-cv {
+    position: relative;
+    background: url('Create CV background.png') no-repeat center center/cover; /* Placeholder image */
+    color: #000;
+    text-align: center;
+    padding: 5rem 2rem;
+    z-index: 1;
+}
+
+
+#create-cv::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(147, 120, 91, 0.5); /* Overlay with color theme */
+    z-index: 0;
+    pointer-events: none;
+}
+
+#create-cv h1,
+#create-cv p {
+    position: relative;
+    z-index: 2; /* Ensure text appears above the overlay */
+}
+
+#create-cv h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+#create-cv p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+/* Template Gallery Section */
+#template-gallery {
+    text-align: center;
+    padding: 3rem 2rem;
+    background-color: #fff;
+}
+
+#template-gallery h2 {
+    font-size: 2rem;
+    color: #0097b2; /* Matches theme color */
+    margin-bottom: 1rem;
+}
+
+#template-gallery p {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 2rem;
+}
+
+/* Gallery Grid */
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive 4x3 grid */
+    gap: 1.5rem; /* Spacing between templates */
+    padding: 0 2rem;
+}
+
+/* Template Card */
+.template {
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 1rem;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.template-img {
+    max-width: 100%;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+
+/* Button for Templates */
+.use-template-btn {
+    display: inline-block;
+    background-color: #0097b2;
+    color: #fff;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.use-template-btn:hover {
+    background-color: #8a6e52;
+    transform: translateY(-3px);
+}
+
+/* Your Dashboard Section Styling */
+#your-dashboard {
+    position: relative;
+    background: url('dashboard background.jpeg') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    padding: 5rem 2rem;
+    margin: 0 auto;
+    border-radius: 10px;
+    z-index: 1;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#your-dashboard::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(147, 120, 91, 0.3);
+    z-index: 0;
+    pointer-events: none;
+}
+
+#your-dashboard h1 {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    margin: 0 auto;
+    padding-bottom: 1rem;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #fff;
+    }
+    
+    #your-dashboard p {
+     font-size: 1.2rem;
+     max-width: 800px;
+     margin: 0 auto;
+     color: white;
+    }
+
+
+/* Extracted Information Section */
+#extracted-info-section {
+    background-color: #f9f9f9;
+    color: #333;
+    padding: 2rem;
+    text-align: left;
+    max-width: 1200px;
+    margin: 2rem auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#extracted-info-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #0097b2;
+}
+
+#extracted-info-section p {
+    font-size: 1.2rem;
+    line-height: 0.5;
+    margin-bottom: 1rem;
+}
+
+#extracted-info-section ul {
+    padding-left: 1.5rem; 
+    text-align: left;
+    margin-bottom: 0;
+}
+
+#extracted-info-section ul li {
+    margin-bottom: 0.5rem; /* Adds spacing between bullet points */
+    text-align: left;
+}
+/* Typewriter animation */
+@keyframes typewriter {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink {
+    from {
+        border-right-color: rgba(0, 0, 0, 0.75);
+    }
+    to {
+        border-right-color: transparent;
+    }
+}
+
+/* Apply the animation */
+.typewriter {
+    display: inline-block;
+    animation: blink 1000000000s step-end infinite alternate;
+}
+/* Styling for the "Compare My Skills" button */
+.compare-btn {
+    display: inline-block;
+    background-color: #0097b2;
+    color: #fff;
+    padding: 0.8rem 2rem;
+    border-radius: 25px;
+    border: none;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.compare-btn:hover {
+    background-color: #8a6e52;
+    transform: translateY(-3px);
+}
+/* Container for the card, button, and chart */
+#extracted-info-section .info-container {
+    display: flex; /* Enables horizontal alignment */
+    flex-wrap: wrap; /* Ensures responsiveness on smaller screens */
+    gap: 1.5rem; /* Adds space between items */
+    justify-content: left; /* Centers the items horizontally */
+    align-items: flex-start; /* Aligns items vertically at the top */
+    margin: 0 auto;
+    max-width: 1200px; /* Sets a max width for the section */
+    padding: 0.5rem;
+}
+
+/* Content Card Styling */
+.content-container {
+    flex: 1; /* Allows the card to grow and take up space */
+    max-width: 400px; /* Ensures the card doesn’t stretch too much */
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    padding: 4rem;
+    text-align: left;
+}
+
+/* Button Styling */
+.compare-btn {
+    align-self: center; /* Aligns the button with the other items */
+    padding: 0.8rem 1.5rem;
+    background-color: #0097b2;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    white-space: nowrap; /* Prevents text wrapping */
+}
+
+.compare-btn:hover {
+    background-color: #8a6e52;
+    transform: translateY(-3px);
+}
+
+/* Chart Styling */
+#skills-comparison-chart {
+    flex: 1; /* Allows the chart to grow with the layout */
+    max-width: 1200px; /* Sets a max width for the chart container */
+    background-color: #fff; /* Optional: Add a background for visual consistency */
+    padding: 0.5rem;
+    border: 1px solid #ddd; /* Matches the card border style */
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    display: flex; /* Ensures proper alignment of the canvas */
+    justify-content: center;
+    align-items: center;
+}
+#skills-list li {
+    font-size: 1rem; /* Fixed spacing */
+    color: #000;
+    text-align: left; /* Removed duplicate */
+    padding-left: 2rem;
+    margin-bottom: 2rem; /* Added missing unit */
+    max-width: 800px;
+}
+
+#module-directory {
+    background-color: #f9f9f9;
+    padding: 2rem 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    max-width: 800px;
+    margin: 2rem auto;
+}
+
+#module-directory h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.directory-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.module-btn {
+    background-color: #0097b2;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    white-space: nowrap; /* Ensures text stays on one line */
+}
+
+.module-btn:hover {
+    background-color: #8a6e52;
+    transform: translateY(-3px);
+}
+#progress-chart {
+    background-color: #f9f9f9;
+    padding: 2rem 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    max-width: 800px;
+    margin: 2rem auto;
+    text-align: center;
+}
+
+.chart-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.progress-bar {
+    width: 100%;
+    max-width: 600px;
+    height: 20px;
+    background-color: #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 1rem;
+}
+
+.progress-fill {
+    height: 100%;
+    background-color: #0097b2;
+    width: 0%; /* Dynamic width based on progress */
+    transition: width 0.5s ease;
+}
+
+.progress-details p {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+/* Job Listings Section */
+#job-listings, #industry-trends {
+    padding: 2rem;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 2rem auto;
+    max-width: 1200px;
+}
+
+#job-listings h1, #industry-trends h1 {
+    font-size: 2rem;
+    color: #0097b2;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+#job-listings ul, #industry-trends ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+#job-listings li, #industry-trends li {
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#job-listings li h2, #industry-trends li h2 {
+    font-size: 1.5rem;
+    color: #333;
+}
+
+#job-listings li p, #industry-trends li p {
+    font-size: 1rem;
+    margin: 0.5rem 0;
+}
+
+#job-listings li a, #industry-trends li a {
+    display: inline-block;
+    margin-top: 0.5rem;
+    background-color: #0097b2;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+#job-listings li a:hover, #industry-trends li a:hover {
+    background-color: #8a6e52;
+}
+/* Filter Section */
+#job-filter {
+    margin: 2rem auto;
+    max-width: 600px;
+    text-align: center;
+    padding: 1rem;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#job-filter form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+#job-filter label {
+    font-size: 1rem;
+    color: #333;
+}
+
+#job-filter select {
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+#job-filter button {
+    background-color: #0097b2;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#job-filter button:hover {
+    background-color: #8a6e52;
+    transform: translateY(-3px);
+}
+
+/* Job Listings Section */
+#job-list li {
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
